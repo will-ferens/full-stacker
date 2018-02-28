@@ -92,22 +92,27 @@ app.listen(port, () => {
 ```js
 app.get('/items', (req, res) => {
   res.json([{
+    id: 1,
     property1: 'value',
     property2: 'value',
     property3: 'value'
   }, {
+    id: 2,
     property1: 'value',
     property2: 'value',
     property3: 'value'
   }, {
+    id: 3,
     property1: 'value',
     property2: 'value',
     property3: 'value'
   }, {
+    id: 4,
     property1: 'value',
     property2: 'value',
     property3: 'value'
   }, {
+    id: 5,
     property1: 'value',
     property2: 'value',
     property3: 'value'
@@ -134,6 +139,8 @@ Example:
 * Server side done!
 
 ## Client Setup
+> NOTE: These instructions walk you through setting up a client with vanilla JS. Feel free to use a frontend framework to build the same site.
+
 * cd up one directory out of the server directory
 * Create a directory called client at the same level as the server directory (NOT inside it) and cd into it
 * Create an `index.html` file
