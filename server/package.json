@@ -1,0 +1,28 @@
+{
+  "name": "full-stack-warmup",
+  "version": "1.0.0",
+  "description": "You will create a server side app that responds with an array of data when it receives a GET request to /entities. You will then create a client side app that makes a request to the server and adds the data to the page.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/full-stack-warmup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/full-stack-warmup/issues"
+  },
+  "homepage": "https://github.com/gSchool/full-stack-warmup#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.1"
+  }
+}
