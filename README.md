@@ -123,7 +123,7 @@ app.get('/items', (req, res) => {
 Example:
 ```js
 {
-  name: 'The Hitchhiker\'s Guide to the Galaxy ',
+  title: 'The Hitchhiker\'s Guide to the Galaxy ',
   author: 'Douglas Adams',
   image: 'https://i.imgur.com/aWZv0Bp.jpg'
 }
