@@ -20,8 +20,8 @@ node_modules
 
 ```json
 "scripts": {
-  "start": "node ./bin/www",
-  "dev": "nodemon ./bin/www",
+  "start": "node index.js",
+  "dev": "nodemon index.js",
 }
 ```
 
