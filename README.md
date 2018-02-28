@@ -2,6 +2,10 @@
 
 You will create a server side app that responds with an array of data when it receives a GET request to /entities. You will then create a client side app that makes a request to the server and adds the data to the page.
 
+## Setup
+
+* Fork/clone this repo.
+
 ## Server Setup
 
 * Create a directory called server
