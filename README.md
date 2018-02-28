@@ -29,29 +29,48 @@ node_modules
 * Add the following contents to the `index.js` file
 
 ```js
+// Bring in dependencies
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 
+// Create an express app
 const app = express();
 
+// Setup logger middleware
 app.use(morgan('tiny'));
+// Setup cors middleware
 app.use(cors());
 
+// When a GET request is received to the path /
 app.get('/', (req, res) => {
+  // Send a JSON response
   res.json({
     message: 'Hello World! 🌈'
   });
 });
 
-app.use((req, res) => {
-  res.status(404)
+// Not Found (404) handler
+app.use((req, res, next) => {
+  // Set the response status code
+  res.status(404);
+  const error = new Error('Not Found. 🔍');
+  // Forward the error to the error handler
+  next(error);
+});
+
+// Error handler
+app.use((error, req, res, next) => {
+  res.status(res.statusCode || 500);
   res.json({
-    message: 'Not found. 🔍'
+    message: error.message,
+    error: error.stack
   });
 });
 
+// Set the PORT to listen on
 const port = process.env.PORT || 3000;
+// Listen on the port
 app.listen(port, () => {
   console.log(`Listening on ${port}`);
 });
